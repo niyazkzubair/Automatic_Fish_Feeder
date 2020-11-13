@@ -1,0 +1,17 @@
+unsigned char Year_current,Minute_current,Minute_started,Minute_stopped,Second_current,HR_current,Date_current,Month_current,count,adc_channel_number;
+unsigned char Pumping_time[10],adc_complete_flag = 0,key_pressed = 0,key_input,x_point = 0,y_point = 0;
+unsigned char Pumping_drtn[10];
+unsigned int  adc_value;
+unsigned char time_array[25],time_array_read[20],Pumping_duration_hour,Pumping_duration_minute;
+unsigned char stop_at_minute,stop_at_hour,start_pumping = 0,minute_incr,minute_count;
+unsigned char Pumping_flag,Pumping_count,pending_run = 0,Pumping_date,Pumping_month;
+unsigned int  time_array_index = 0;
+unsigned char Next_scheduled_pumping_time_HR,Next_scheduled_pumping_time_Minute;
+unsigned int  global_var1 = 0, pending_minutes;
+unsigned long int total_available_minutes,time_ref = 0;
+unsigned char pending_hours,day_has_changed = 0,HR_restricted_lower = 0x18,HR_restricted_upper = 0x8;
+unsigned int  pqr,time_refr=0,for_debug = 0;
+unsigned char temp1,temp2,temp3,remaining_minutes,dsp_counter=0x00;	
+unsigned char earlier_completed = 0,with_in_minute=0x00,entry_stat = 0x00;
+unsigned char efg = 0,system_error = 0x0;
+unsigned char pumping_trig_sec_count = 0,pumping_trig_en = 0;
